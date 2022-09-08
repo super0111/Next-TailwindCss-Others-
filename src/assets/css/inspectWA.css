@@ -1,0 +1,39 @@
+
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-color: '#000000';
+    background: url("../images/landDark2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bannerButton {
+    border-radius:'1vh';
+    background:'rgba(100,100,100,0.5)';        
+    font-size:'2vh';
+    height:'6vh';
+    line-height:'6vh'; 
+    width:'30vw';
+    color:'white';
+    cursor: 'pointer';
+}
+
+    .bannerButton:hover {
+        border-radius:'1vh';
+        background:'rgba(100,100,100,0.8)';        
+        font-size:'2vh';
+        height:'6vh';
+        line-height:'6vh'; 
+        width:'30vw';
+        color:'white';
+        cursor: 'pointer';
+    }
