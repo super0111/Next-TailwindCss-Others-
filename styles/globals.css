@@ -77,9 +77,10 @@ a {
   .header_img {
     width: 1138px;
     left: calc(50% - 500px);
-    margin-top: 18rem;
+    margin-top: 230px !important;
   }
 }
+
 
 @media screen and (max-width: 640px) {
   .header_img {
@@ -100,6 +101,9 @@ a {
 }
 
 @media screen and (max-width: 370px) {
+  .navbar button {
+    padding: 0 !important;
+  }
   .header_img {
     width: 1138px;
     left: calc(50% - 300px);

@@ -1,14 +1,10 @@
 
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }: { src: string, width: number, quality?: number}) => {
-  return `https://toucan.earth/_next/image?url=${src}&w=${width}&q=${quality || 75}`
-}
-
 const WhyCarbon = () => {
   return (
     <div 
-      className="xl:pt-80 lg:pt-80 md:pt-28 sm:pt-28 xs-pt-28"
+      className="pt-80"
       style={{
         background: "linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(179.44deg, rgba(255, 255, 255, 0) 16.41%, #FFFFFF 74.5%), conic-gradient(from -46.49deg at 50% 12.09%, #FFE9F6 0deg, #FFDBE6 59.85deg, #E9F4FF 120deg, #FFE9F6 360deg)"
       }}
@@ -40,8 +36,7 @@ const WhyCarbon = () => {
           <div className="py-4 z-10 space-y-2 text-center lg:bg-white">
             <div className="img_item">
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Fwhy-1.svg"
+                src="/images/why-1.svg"
                 alt="Header_bg1"
                 width={200}
                 height={200}
@@ -57,8 +52,7 @@ const WhyCarbon = () => {
           <div className="py-4 z-10 space-y-2 text-center bg-white">
             <div className="img_item">
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Fwhy-2.svg"
+                src="/images/why-2.svg"
                 alt="Header_bg1"
                 width={200}
                 height={200}
@@ -74,8 +68,7 @@ const WhyCarbon = () => {
           <div className="py-4 z-10 space-y-2 text-center bg-white">
             <div className="img_item">
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Fwhy-3.svg"
+                src="/images/why-3.svg"
                 alt="Header_bg1"
                 width={200}
                 height={200}

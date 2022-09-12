@@ -1,9 +1,5 @@
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }: { src: string, width: number, quality?: number}) => {
-  return `https://toucan.earth/_next/image?url=${src}&w=${width}&q=${quality || 75}`
-}
-
 const News = () => {
   return (
     <div 
@@ -26,8 +22,7 @@ const News = () => {
           <div className="rounded-2xl overflow-hidden bg-white lg:grid grid-cols-3" style={{boxShadow:"0px 24px 100px -8px rgba(255, 181, 205, 0.4)"}}>
               <div className='item_img'>
                 <Image
-                  loader={myLoader}
-                  src="https%3A%2F%2Fblog.toucan.earth%2Fcontent%2Fimages%2Fsize%2Fw2000%2F2022%2F01%2Fblog-2b.jpeg"
+                  src="/images/blog-2b.webp"
                   alt="Header_bg1"
                   width={1480}
                   height={1400}

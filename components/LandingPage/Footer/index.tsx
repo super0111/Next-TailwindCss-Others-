@@ -2,10 +2,6 @@ import Image from 'next/image';
 import { FaDiscord, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { BsMedium } from "react-icons/bs";
 
-const myLoader = ({ src, width, quality }: { src: string, width: number, quality?: number}) => {
-  return `https://toucan.earth/_next/image?url=${src}&w=${width}&q=${quality || 75}`
-}
-
 const companies = [
   { text: "About" },
   { text: "Blog" },
@@ -118,8 +114,7 @@ const Footer = () => {
         </div>
         <div className="order-first flex items-center justify-center space-x-4">
           <Image
-              loader={myLoader}
-              src="%2Fimg%2Ftoucan-logo.svg"
+              src="/images/toucan-logo.svg"
               alt="Header_bg1"
               width={120}
               height={33}

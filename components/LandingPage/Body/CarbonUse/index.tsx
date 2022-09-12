@@ -1,16 +1,12 @@
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }: { src: string, width: number, quality?: number}) => {
-  return `https://toucan.earth/_next/image?url=${src}&w=${width}&q=${quality || 75}`
-}
-
 const carbonUses = [
-  { url: "%2Fsvgs%2Fcarbon-use-cases%2Fcrypto-currency-money.svg", title: "Carbon as Collateral", text: "Add tokenized carbon credits as a diversified collateral type in decentralised finance" },
-  { url: "%2Fsvgs%2Fcarbon-use-cases%2Ficon-liquidity-high.svg", title: "Carbon in the Metaverse", text: "Incorporate carbon into the metaverse and incentivise IRL positive impact." },
-  { url: "%2Fsvgs%2Fcarbon-use-cases%2Fchristmas-snow-globe.svg", title: "Transparent Compensation", text: "Use Toucan’s upcoming retirement functionality to take public climate action." },
-  { url: "%2Fsvgs%2Fcarbon-use-cases%2Ficon-price-signal.svg", title: "Earn Interest on Carbon", text: "Access new ways of turning carbon credits into productive, yield-bearing assets." },
-  { url: "%2Fsvgs%2Fcarbon-use-cases%2Ficon-open.svg", title: "Green NFTs", text: "Integrate carbon with your next NFT project for planet positive works of art." },
-  { url: "%2Fsvgs%2Fcarbon-use-cases%2Fdigital-asset.svg", title: "Carbon as a Digital Asset", text: "Diversify treasury or portfolio holdings with real-world carbon credits, tokenized." },
+  { url: "/images/crypto-currency-money.svg", title: "Carbon as Collateral", text: "Add tokenized carbon credits as a diversified collateral type in decentralised finance" },
+  { url: "/images/icon-liquidity-high.svg", title: "Carbon in the Metaverse", text: "Incorporate carbon into the metaverse and incentivise IRL positive impact." },
+  { url: "/images/christmas-snow-globe.svg", title: "Transparent Compensation", text: "Use Toucan’s upcoming retirement functionality to take public climate action." },
+  { url: "/images/icon-price-signal.svg", title: "Earn Interest on Carbon", text: "Access new ways of turning carbon credits into productive, yield-bearing assets." },
+  { url: "/images/icon-open.svg", title: "Green NFTs", text: "Integrate carbon with your next NFT project for planet positive works of art." },
+  { url: "/images/digital-asset.svg", title: "Carbon as a Digital Asset", text: "Diversify treasury or portfolio holdings with real-world carbon credits, tokenized." },
 ]
 
 const CarbonUse = () => {
@@ -38,7 +34,6 @@ const CarbonUse = () => {
             <div className="col-span-1 text-lg" key={i}>
               <div className="w-14 h-14 lg:w-12 lg:h-12 xl:w-16 xl:h-16">
                 <Image
-                  loader={myLoader}
                   src={item.url}
                   alt="Header_bg1"
                   width={1920}

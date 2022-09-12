@@ -1,28 +1,24 @@
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }: { src: string, width: number, quality?: number}) => {
-  return `https://toucan.earth/_next/image?url=${src}&w=${width}&q=${quality || 75}`
-}
-
 const ecoSystems = [
-  { url: "%2Fsvgs%2Fpartners%2Fclimate-chain-coalition.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fpolygon.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fcurve-labs.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fcrypto-climate-accord." },
-  { url: "%2Fsvgs%2Fpartners%2Fregen-network.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fgitcoin.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fmai-finance.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fmarket.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fcelo.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fmoss.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fkolektivo.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fklimadao.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fstar-cb.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fdsv.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fkernel.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fporini.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fvlinder.svg" },
-  { url: "%2Fsvgs%2Fpartners%2Fbsci.svg" },
+  { url: "/images/climate-chain-coalition.svg" },
+  { url: "/images/polygon.svg" },
+  { url: "/images/curve-labs.svg" },
+  { url: "/images/crypto-climate-accord.svg" },
+  { url: "/images/regen-network.svg" },
+  { url: "/images/gitcoin.svg" },
+  { url: "/images/mai-finance.svg" },
+  { url: "/images/market.svg" },
+  { url: "/images/celo.svg" },
+  { url: "/images/moss.svg" },
+  { url: "/images/kolektivo.svg" },
+  { url: "/images/klimadao.svg" },
+  { url: "/images/star-cb.svg" },
+  { url: "/images/dsv.svg" },
+  { url: "/images/kernel.svg" },
+  { url: "/images/porini.svg" },
+  { url: "/images/vlinder.svg" },
+  { url: "/images/bsci.svg" },
 ]
 
 const Ecosystem = () => {
@@ -56,7 +52,6 @@ const Ecosystem = () => {
               <a href="#" target="_blank" key={i}>
                 <Image
                   className="img_bg"
-                  loader={myLoader}
                   src={item.url}
                   alt="Header_bg1"
                   width={100}

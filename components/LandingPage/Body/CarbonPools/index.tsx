@@ -29,8 +29,7 @@ const CarbonPools = () => {
           >
             <div className="item_img1">
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Fbct-logo.svg"
+                src="/images/bct-logo.svg"
                 alt="Header_bg1"
                 width={1920}
                 height={1920}
@@ -63,8 +62,7 @@ const CarbonPools = () => {
           >
             <div className="item_img1">
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Fbct-logo.svg"
+                src="/images/nbct-logo.svg"
                 alt="Header_bg1"
                 width={1920}
                 height={1920}

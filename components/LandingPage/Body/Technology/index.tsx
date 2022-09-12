@@ -1,9 +1,5 @@
 import Image from 'next/image'
 
-const myLoader = ({ src, width, quality }: { src: string, width: number, quality?: number}) => {
-  return `https://toucan.earth/_next/image?url=${src}&w=${width}&q=${quality || 75}`
-}
-
 const Technology = () => {
   return (
     <div className="pt-20 lg:pt-40 technology">
@@ -29,8 +25,7 @@ const Technology = () => {
                 <div className="w-16 h-16">
                   <div className="item_img">
                     <Image
-                      loader={myLoader}
-                      src="%2Fsvgs%2Ficon%2Fbridge.svg"
+                      src="/images/bridge.svg"
                       alt="Header_bg1"
                       width={1920}
                       height={1920}
@@ -55,8 +50,7 @@ const Technology = () => {
               <div style={{boxShadow:"0px 0px 48px -12px rgba(21, 34, 57, 0.2)", maxHeight:"400px"}}>
                 <div className='item_img'>
                   <Image
-                    loader={myLoader}
-                    src="%2Fscreenshots%2Fdashboard.png"
+                    src="/images/dashboard.webp"
                     alt="Header_bg1"
                     width={1920}
                     height={1920}
@@ -73,8 +67,7 @@ const Technology = () => {
               <div className='w-16 h-16'>
                 <div className='item_img'>
                   <Image
-                    loader={myLoader}
-                    src="%2Fsvgs%2Ficon%2Fmeta-registry.svg"
+                    src="/images/meta-registry.svg"
                     alt="Header_bg1"
                     width={1920}
                     height={1920}
@@ -96,8 +89,7 @@ const Technology = () => {
             </div>
             <div className='item_img'>
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Ftechnology-meta-registry.svg"
+                src="/images/technology-meta-registry.svg"
                 alt="Header_bg1"
                 width={1520}
                 height={800}
@@ -112,8 +104,7 @@ const Technology = () => {
               <div className='w-16 h-16'>
                 <div className='item_img'>
                   <Image
-                    loader={myLoader}
-                    src="%2Fsvgs%2Ficon%2Fcredits.svg"
+                    src="/images/credits.svg"
                     alt="Header_bg1"
                     width={1920}
                     height={1920}
@@ -135,8 +126,7 @@ const Technology = () => {
             </div>
             <div className='item_img'>
               <Image
-                loader={myLoader}
-                src="%2Fsvgs%2Ftechnology-carbon-pools.svg"
+                src="/images/technology-carbon-pools.svg"
                 alt="Header_bg1"
                 width={1520}
                 height={800}
