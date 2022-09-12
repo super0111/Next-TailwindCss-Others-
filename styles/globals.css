@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -24,3 +28,127 @@ a {
     background: black;
   }
 }
+
+
+
+
+/* **** Custom **** */
+.text-powerRed {
+  --tw-text-opacity: 1;
+  color: rgb(243 64 121/var(--tw-text-opacity));
+}
+.text-candy {
+  --tw-gradient-from: #fe5170;
+  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to,rgb(254 81 112/0));
+  --tw-gradient-to: #f87aa3;
+}
+.text-greeny {
+  --tw-gradient-from: #00c5e0;
+  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to,rgb(0 197 224/0));
+  --tw-gradient-stops: var(--tw-gradient-from),#2bdb86,var(--tw-gradient-to,rgb(43 219 134/0));
+  --tw-gradient-to: #b5e200;
+}
+.text-candy, .text-greeny {
+  background-image: linear-gradient(to right,var(--tw-gradient-stops));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 34 57/var(--tw-bg-opacity));
+}
+.whyCarbon {
+  background:linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(179.44deg, rgba(255, 255, 255, 0) 16.41%, #FFFFFF 74.5%), conic-gradient(from -46.49deg at 50% 12.09%, #FFE9F6 0deg, #FFDBE6 59.85deg, #E9F4FF 120deg, #FFE9F6 360deg)
+}
+.header_img {
+  width: 1400px;
+  left: calc(50% - 300px);
+}
+
+@media screen and (max-width: 1280px) {
+  .header_img {
+    width: 1138px;
+    left: calc(50% - 240px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header_img {
+    width: 1138px;
+    left: calc(50% - 500px);
+    margin-top: 18rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header_img {
+    width: 1138px;
+    left: calc(50% - 300px);
+    margin-top: 12rem;
+  }
+
+  .header_md_img span{
+    width: 640px !important;
+    height: 640px !important;
+  }
+  .-mr-6 {
+    margin-right: 0 !important
+  }
+  .xs-pt-28 {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .header_img {
+    width: 1138px;
+    left: calc(50% - 300px);
+    margin-top: 14rem;
+  }
+}
+
+
+
+
+.item_img {
+  display:inline-block;
+  max-width:100%;
+  overflow:hidden;
+  position:relative;
+  box-sizing:border-box;
+  margin:0;
+}
+.news .item_img {
+  display:inline-block;
+  max-width:100%;
+  overflow:hidden;
+  position:relative;
+  box-sizing:border-box;
+  margin:0;
+  margin-bottom: -10px;
+}
+.item_img1 {
+  display:inline-block;
+  max-width:100%;
+  overflow:hidden;
+  position:relative;
+  box-sizing:border-box;
+  margin:0;
+  background-image: url("../public/images/bct-logo-glow.png");
+  background-position: 50%;
+  background-size: contain;
+}
+.light_red_bg {
+  background:linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(179.44deg, rgba(255, 255, 255, 0.5) 16.41%, rgba(255, 255, 255, 0) 74.5%), conic-gradient(from 197.81deg at -10.22% 10.63%, #FFE9F6 0deg, #FFDBE6 50.65deg, #E9F4FF 120deg, #FFE9F6 360deg)
+}
+.light_red_bg1 {
+  background:linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(179.44deg, rgba(255, 255, 255, 0.5) 16.41%, rgba(255, 255, 255, 0) 74.5%), conic-gradient(from -68.1deg at -10.22% 10.63%, #FFE9F6 0deg, #FFDBE6 50.65deg, #E9F4FF 120deg, #FFE9F6 360deg)
+}
+.light_blue_bg {
+  background:linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(179.44deg, rgba(255, 255, 255, 0.5) 16.41%, rgba(255, 255, 255, 0) 74.5%), conic-gradient(from -71.44deg at 49.05% 35.41%, #F0FFE9 0deg, #DBFFF9 59.85deg, #E9F4FF 120deg, #F0FFE9 360deg)
+}
+.img_bg {
+  background-image: url("../public/images/bct-logo-glow.png");
+}
+
