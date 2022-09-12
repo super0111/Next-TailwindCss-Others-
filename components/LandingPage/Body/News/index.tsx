@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Image from 'next/image'
 
 const News = () => {
+  const [ carrousel, setCarrousel ] = useState(1);
   return (
     <div 
       className="pb-28 lg:pb-40 news"
@@ -21,21 +23,51 @@ const News = () => {
         <div className="-mt-6">
           <div className="rounded-2xl overflow-hidden bg-white lg:grid grid-cols-3" style={{boxShadow:"0px 24px 100px -8px rgba(255, 181, 205, 0.4)"}}>
               <div className='item_img'>
-                <Image
-                  src="/images/blog-2b.webp"
-                  alt="Header_bg1"
-                  width={1480}
-                  height={1400}
-                />
+                { carrousel === 1 ?
+                  <Image
+                    src="/images/blog-2b.webp"
+                    alt="Header_bg1"
+                    width={1480}
+                    height={1400}
+                  /> : carrousel === 2 ?
+                  <Image
+                    src="/images/1.webp"
+                    alt="Header_bg1"
+                    width={1480}
+                    height={1400}
+                  /> : carrousel === 3 ?
+                  <Image
+                    src="/images/2.webp"
+                    alt="Header_bg1"
+                    width={1480}
+                    height={1400}
+                  /> : ""
+                }
               </div>
             <div className='col-span-2 p-12 flex flex-col justify-between'>
               <div className='space-y-4'>
-                <div className='text-xl font-semibold'>
-                  Regenerative Economies in Web3
-                </div>
-                <div className='text-xl text-gray-500'>
-                  While regenerative economics has been a topic of many papers and discussion for years, there is a promising regenerative movement emerging in web3 at the intersection of blockchain technology and climate action.
-                </div>
+                { carrousel === 1 ?
+                  <div className='text-xl font-semibold'>
+                    Regenerative Economies in Web3
+                  </div> : carrousel === 2 ?
+                  <div className='text-xl font-semibold'>
+                    Base Carbon Tonne (BCT): a new Web3 building block
+                  </div> : carrousel === 3 ?
+                  <div className='text-xl font-semibold'>
+                    Toucan’s Climate Action for Gitcoin Grants Round 12
+                  </div> : ""
+                }
+                { carrousel === 1 ?
+                  <div className='text-xl text-gray-500'>
+                    While regenerative economics has been a topic of many papers and discussion for years, there is a promising regenerative movement emerging in web3 at the intersection of blockchain technology and climate action.
+                  </div> : carrousel === 2 ?
+                   <div className='text-xl text-gray-500'>
+                    Meet Base Carbon Tonne, a new Web3 building block that’s empowering a wave of regenerative innovation on the open internet.
+                  </div> : carrousel === 3 ?
+                   <div className='text-xl text-gray-500'>
+                    Toucan supports Gitcoin by donating carbon credits tokenized with the Toucan Protocol to make Grants Round 12 climate-positive. Read it here!
+                  </div> : ""
+                }
               </div>
               <div className='space-y-2 sm:flex pt-8 items-center justify-between'>
                 <a href='#' target="_blank">
@@ -46,13 +78,13 @@ const News = () => {
                 </a>
                 <div className='flex items-center -mx-1 -my-5'>
                   <div className='px-1 py-5 group cursor-pointer'>
-                    <div className='h-1 w-12 rounded-full bg-gray-500'></div>
+                    <div className={ carrousel === 1 ? "h-1 w-12 rounded-full bg-gray-500" : "h-1 w-12 rounded-full bg-gray-300" } onClick={()=>setCarrousel(1)}></div>
                   </div>
                   <div className='px-1 py-5 group cursor-pointer'>
-                    <div className='h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300'></div>
+                    <div className={ carrousel === 2 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300" } onClick={()=>setCarrousel(2)}></div>
                   </div>
                   <div className='px-1 py-5 group cursor-pointer'>
-                    <div className='h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300'></div>
+                    <div className={ carrousel === 3 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300"} onClick={()=>setCarrousel(3)}></div>
                   </div>
                 </div>
               </div>

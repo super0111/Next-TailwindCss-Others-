@@ -1,4 +1,6 @@
+import { Console } from 'console';
 import Image from 'next/image'
+import { useState } from 'react'
 
 const ecoSystems = [
   { url: "/images/climate-chain-coalition.svg" },
@@ -22,6 +24,7 @@ const ecoSystems = [
 ]
 
 const Ecosystem = () => {
+  const [ carrousel, setCarrousel ] = useState(1);
   return (
     <div 
       className="pt-28 lg:pt-40 pb-32"
@@ -62,26 +65,46 @@ const Ecosystem = () => {
           </div>
           <div className='rounded-2xl overflow-hidden' style={{boxShadow:"0px 24px 100px -8px rgba(255, 181, 205, 0.4)"}}>
             <div className='bg-white px-8 pt-8 pb-10 sm:px-12 sm:pt-12 lg:px-16 lg:pt-14 xl:px-20 space-y-16'>
-              <div style={{letterSpacing:"-0.02em"}} className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-candy leading-tight md:leading-tight lg:leading-tight">
-                “Toucan brings long-sought transparency and efficiency into
-                the voluntary carbon ecosystem. This benefits both the supply
-                and demand sides of the markets.”
-              </div>
+              { carrousel === 1 ?
+                <div style={{letterSpacing:"-0.02em"}} className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-candy leading-tight md:leading-tight lg:leading-tight">
+                  “Toucan brings long-sought transparency and efficiency into
+                  the voluntary carbon ecosystem. This benefits both the supply
+                  and demand sides of the markets.”
+                </div> :
+                carrousel === 2 ?
+                <div style={{letterSpacing:"-0.02em"}} className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-candy leading-tight md:leading-tight lg:leading-tight">
+                  “We appreciate how simple and straightforward it is to integrate BCT into our Carbonized NFTs. 
+                  Toucan&apos;s pooled carbon credits system are a powerful DeFi primitive and a foundational piece of the future of carbon markets.”
+              </div> : ""
+              }
               <div className='space-y-4 md:flex items-end justify-between'>
                 <div className='text-center md:text-left text-xl'>
-                  <div className='font-semibold'>
-                    Toni Caradonna
-                  </div>
-                  <div className=''>
-                    CTO, Porini Foundation
-                  </div>
+                  { carrousel === 1 ?
+                    <div className='font-semibold'>
+                      Toni Caradonna
+                    </div> :
+                    carrousel === 2 ?
+                    <div className='font-semibold'>
+                     Carbonized NFTs
+                    </div> : ""
+                  }
+                  { carrousel === 1 ?
+                    <div className=''>
+                      CTO, Porini Foundation
+                    </div> :
+                     carrousel === 2 ?
+                    <div className=''>
+                      @carbonizedNFT
+                    </div> : ""
+                  }
                 </div>
+                {console.log("carrousel",carrousel)}
                 <div className='flex items-center -mx-1 -my-5 justify-center'>
                   <div className='px-1 py-5 group cursor-pointer'>
-                    <div className='h-1 w-12 rounded-full bg-gray-500'></div>
+                    <div className={ carrousel === 1 ? "h-1 w-12 rounded-full bg-gray-500" : "h-1 w-12 rounded-full bg-gray-300"} onClick={()=>setCarrousel(1)}></div>
                   </div>
                   <div className='px-1 py-5 group cursor-pointer'>
-                    <div className='h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300'></div>
+                    <div className={ carrousel === 2 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300"} onClick={()=>setCarrousel(2)}></div>
                   </div>
                 </div>
               </div>
