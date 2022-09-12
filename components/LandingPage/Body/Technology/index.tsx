@@ -19,7 +19,10 @@ const Technology = () => {
         </div>
         <div className="mt-5 mb-12 lg:mb-16 text-lg md:text-xl xl:text-2xl leading-relaxed md:leading-relaxed xl:leading-[36px] text-gray-500 max-w-2xl"></div>
         <div className="grid grid-cols-2 gap-8">
-          <div className="overflow-hidden col-span-2 lg:flex lg:space-x-12 items-end rounded-2xl">
+          <div 
+            className="overflow-hidden col-span-2 lg:flex lg:space-x-12 items-end rounded-2xl"
+            style={{background: "linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(179.44deg, rgba(255, 255, 255, 0.5) 16.41%, rgba(255, 255, 255, 0) 74.5%), conic-gradient(from -45.24deg at 52.55% 35.87%, #FFE9F6 0deg, #FFDBE7 59.85deg, #E9F4FF 120deg, #FFE9F6 360deg)", }}
+          >
             <div className="lg:w-1/2 lg:pt-16">
               <div className="p-8 sm:p-12 xl:p-16">
                 <div className="w-16 h-16">
