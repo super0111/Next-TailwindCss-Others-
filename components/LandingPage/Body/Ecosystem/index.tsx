@@ -98,7 +98,6 @@ const Ecosystem = () => {
                     </div> : ""
                   }
                 </div>
-                {console.log("carrousel",carrousel)}
                 <div className='flex items-center -mx-1 -my-5 justify-center'>
                   <div className='px-1 py-5 group cursor-pointer' onClick={()=>setCarrousel(1)}>
                     <div className={ carrousel === 1 ? "h-1 w-12 rounded-full bg-gray-500" : "h-1 w-12 rounded-full bg-gray-300"}></div>
