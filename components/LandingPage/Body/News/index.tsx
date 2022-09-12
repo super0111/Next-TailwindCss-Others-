@@ -77,14 +77,14 @@ const News = () => {
                   </div>
                 </a>
                 <div className='flex items-center -mx-1 -my-5'>
-                  <div className='px-1 py-5 group cursor-pointer'>
-                    <div className={ carrousel === 1 ? "h-1 w-12 rounded-full bg-gray-500" : "h-1 w-12 rounded-full bg-gray-300" } onClick={()=>setCarrousel(1)}></div>
+                  <div className='px-1 py-5 group cursor-pointer' onClick={()=>setCarrousel(1)}>
+                    <div className={ carrousel === 1 ? "h-1 w-12 rounded-full bg-gray-500" : "h-1 w-12 rounded-full bg-gray-300" }></div>
                   </div>
-                  <div className='px-1 py-5 group cursor-pointer'>
-                    <div className={ carrousel === 2 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300" } onClick={()=>setCarrousel(2)}></div>
+                  <div className='px-1 py-5 group cursor-pointer'onClick={()=>setCarrousel(2)}>
+                    <div className={ carrousel === 2 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300" }></div>
                   </div>
-                  <div className='px-1 py-5 group cursor-pointer'>
-                    <div className={ carrousel === 3 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300"} onClick={()=>setCarrousel(3)}></div>
+                  <div className='px-1 py-5 group cursor-pointer' onClick={()=>setCarrousel(3)}>
+                    <div className={ carrousel === 3 ? "h-1 w-12 rounded-full bg-gray-500 group-hover:bg-gray-500 transition-color duration-300" : "h-1 w-12 rounded-full bg-gray-300 group-hover:bg-gray-500 transition-color duration-300"}></div>
                   </div>
                 </div>
               </div>
