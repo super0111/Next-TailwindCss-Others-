@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.effect1 {
+  position: relative;
+  animation-name: example1;
+  animation-duration: 3s;
+}
+
+@keyframes example1 {
+  0% {
+    bottom: -100px;
+  }
+
+  100% {
+    bottom: 0px;
+  }
+}
+
+.effect_car {
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes mymove {
+  from {
+    left: 1400px;
+  }
+
+  to {
+    left: 36px;
+  }
+}
+
+.effect_cloud1 {
+  position: relative;
+  animation: mymovecloud1 2s infinite;
+  animation-timing-function: linear;
+}
+@keyframes mymovecloud1 {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.effect_cloud2 {
+  position: relative;
+  animation: mymovecloud2 2s infinite;
+  animation-timing-function: linear;
+}
+@keyframes mymovecloud2 {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.effect_cloud3 {
+  position: relative;
+  animation: mymovecloud3 4s infinite;
+  animation-timing-function: linear;
+}
+@keyframes mymovecloud3 {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.effect_cloud4 {
+  position: relative;
+  animation: mymovecloud4 3s infinite;
+  animation-timing-function: linear;
+}
+@keyframes mymovecloud4 {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.effect_cloud5 {
+  position: relative;
+  animation: mymovecloud5 2s infinite;
+  animation-timing-function: linear;
+}
+@keyframes mymovecloud5 {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@font-face {
+  font-family: "Articulat CF";
+  src: url("../public/fonts/ArticulatCF-Normal.ttf");
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 60px;
+  left: 65px;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-nav {
+    left: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-nav {
+    left: 16px;
+  }
+}
